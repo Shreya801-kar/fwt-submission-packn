@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="StudySpace - a simple student study planner.">
+  <title>StudySpace | Student Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home"><span class="brand-mark">S</span> StudySpace</a>
+    <nav aria-label="Main navigation">
+      <a href="#dashboard">Dashboard</a>
+      <a href="#planner">My Tasks</a>
+      <a href="#tips">Study Tips</a>
+    </nav>
+    <span class="top-note">Your space to focus ✦</span>
+  </header>
+
+  <main id="home">
+    <section class="hero" id="dashboard">
+      <div class="hero-copy">
+        <p class="eyebrow">STUDENT PRODUCTIVITY HUB</p>
+        <h1>Make today<br><span>count.</span></h1>
+        <p class="hero-text">Plan your study sessions, keep track of assignments and celebrate every small win.</p>
+        <a class="primary-btn" href="#planner">Plan my day <span>→</span></a>
+      </div>
+      <div class="hero-art" aria-label="Study illustration">
+        <div class="sun"></div><div class="book book-one"></div><div class="book book-two"></div>
+        <div class="plant"><i></i><i></i><i></i><b></b></div>
+        <div class="art-note">one task<br>at a time ✦</div>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="Study summary">
+      <article class="stat-card">
+        <span class="stat-icon lavender">✎</span>
+        <div><p class="stat-label">Tasks added</p><strong id="totalTasks">0</strong></div>
+      </article>
+      <article class="stat-card">
+        <span class="stat-icon mint">✓</span>
+        <div><p class="stat-label">Tasks completed</p><strong id="completedTasks">0</strong></div>
+      </article>
+      <article class="stat-card">
+        <span class="stat-icon peach">◎</span>
+        <div><p class="stat-label">Your progress</p><strong id="progressText">0%</strong></div>
+      </article>
+    </section>
+
+    <section class="planner-section" id="planner">
+      <div class="section-heading">
+        <div><p class="eyebrow">STAY ON TRACK</p><h2>My study planner</h2></div>
+        <span class="today-pill" id="todayDate">Today</span>
+      </div>
+
+      <div class="planner-grid">
+        <section class="panel add-panel">
+          <div class="panel-heading"><div><span class="mini-icon">＋</span><h3>Add a task</h3></div></div>
+          <form id="taskForm">
+            <label for="taskInput">What do you need to do?</label>
+            <input id="taskInput" type="text" placeholder="e.g. Revise HTML semantic tags" maxlength="80" required>
+            <div class="form-row">
+              <div class="field">
+                <label for="subjectInput">Subject</label>
+                <select id="subjectInput">
+                  <option>FWT</option><option>Python</option><option>BEE</option>
+                  <option>Mathematics</option><option>Other</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="priorityInput">Priority</label>
+                <select id="priorityInput">
+                  <option>Medium</option><option>High</option><option>Low</option>
+                </select>
+              </div>
+            </div>
+            <button class="primary-btn full-btn" type="submit">Add to my list <span>＋</span></button>
+          </form>
+          <p class="form-hint">Tip: Break a big assignment into smaller tasks.</p>
+        </section>
+
+        <section class="panel tasks-panel">
+          <div class="panel-heading task-heading">
+            <div><span class="mini-icon">☷</span><h3>Upcoming tasks</h3></div>
+            <span class="task-count" id="taskCount">0 tasks</span>
+          </div>
+          <div class="progress-wrap">
+            <div class="progress-label"><span>Daily progress</span><strong id="progressLabel">0%</strong></div>
+            <div class="progress-track"><div class="progress-fill" id="progressBar"></div></div>
+          </div>
+          <ul id="taskList" class="task-list">
+            <li class="empty-state">Your task list is clear. Add your first task! ✨</li>
+          </ul>
+        </section>
+      </div>
+    </section>
+
+    <section class="tips-section" id="tips">
+      <div><p class="eyebrow">A LITTLE REMINDER</p><h2>Study smarter, not harder.</h2></div>
+      <div class="tip-card"><span>01</span><p><strong>Start small.</strong> Begin with one manageable task.</p></div>
+      <div class="tip-card"><span>02</span><p><strong>Take breaks.</strong> A short break can refresh your focus.</p></div>
+      <div class="tip-card"><span>03</span><p><strong>Be consistent.</strong> Progress matters more than perfection.</p></div>
+    </section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="#home"><span class="brand-mark">S</span> StudySpace</a><p>Made for students, one task at a time.</p><span>© 2026 StudySpace</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
